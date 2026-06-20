@@ -118,7 +118,7 @@ class RAGPgVector(RAGBase):
             ).fetchall()
         except Exception as e:
             print(e)
-            conn.rollback()
+            self.conn.rollback()
             return None
 
         return [
